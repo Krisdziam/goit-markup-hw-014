@@ -84,14 +84,34 @@ h6 {
 }
 
 .link-header {
+  position: relative;
+  padding: 28px 0;
   color: #2e2f42;
   text-decoration: none;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.link-header::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: "";
+  border-radius: 2px;
+  background-color: #2196f3;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
 }
 
 .link-header:hover,
 .link-header:focus {
   color: #2196f3;
+}
+
+.link-header:hover::after,
+.link-header:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .list-contacts {
