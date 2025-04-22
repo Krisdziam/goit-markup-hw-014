@@ -373,6 +373,10 @@ h6 {
   padding: 100px 0;
   background-color: #2e2f42;
 }
+.footer .container {
+  display: flex;
+}
+
 .footer-logo {
   color: #fff;
   flex-shrink: 0;
@@ -385,8 +389,9 @@ h6 {
   display: inline-block;
   margin-bottom: 16px;
 }
-.footer-text-wrapper {
+.footer-content {
   max-width: 264px;
+  margin-right: 120px;
 }
 .footer-text {
   font-weight: 400;
@@ -394,4 +399,21 @@ h6 {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+}
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.footer-social-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.footer .team-link-social:hover,
+.footer .team-link-social:focus {
+  background-color: #31d0aa;
 }
