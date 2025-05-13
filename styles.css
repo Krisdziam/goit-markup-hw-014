@@ -3,8 +3,21 @@
 * {
   box-sizing: border-box;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: white;
   color: #212121;
 }
@@ -63,7 +76,7 @@ h6 {
 
 .logo {
   flex-shrink: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -102,7 +115,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 4px;
-  content: "";
+  content: '';
   border-radius: 2px;
   background-color: #2196f3;
   transform: scaleX(0);
@@ -147,7 +160,12 @@ h6 {
   padding: 188px 0;
   text-align: center;
 
-  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(./images/hero-background.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(./images/hero-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -245,7 +263,8 @@ h6 {
   width: 264px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.16), 0px 1px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.16),
+    0px 1px 6px rgba(0, 0, 0, 0.08);
 }
 .team-item img {
   object-fit: cover;
@@ -386,7 +405,7 @@ h6 {
 .footer-logo {
   color: #fff;
   flex-shrink: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -461,7 +480,8 @@ h6 {
   justify-content: center;
   align-items: center;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -479,4 +499,124 @@ h6 {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
+/* Form */
+.review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+.form-input {
+  width: 100%;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 38px;
+  padding-right: 16px;
+  line-height: 1.5;
+  border: 1px solid #2e2f42;
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+.form-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: #2e2f42;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-form-input-wrapper:focus-within .form-input-icon {
+  fill: #4d5ae5;
+}
+
+.form-comment {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid #2e2f42;
+  border-radius: 4px;
+
+  resize: none;
+}
+
+.form-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.form-checkbox-wrapper {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  cursor: pointer;
+}
+
+.form-checkbox-label-link {
+  margin-left: 4px;
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.form-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #2e2f42;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-own-checkbox-icon {
+  fill: #ffffff;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.form-checkbox-input:checked + .form-checkbox-label .form-own-checkbox {
+  background-color: #404bbf;
+}
+
+.form-checkbox-input:checked + .form-checkbox-label .form-own-checkbox-icon {
+  opacity: 1;
+}
+
+/* Focus стиль */
