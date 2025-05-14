@@ -56,7 +56,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" id="open-modal">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -576,8 +578,30 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <h2 class="footer-subscribe-title">Subscribe</h2>
+          <div class="footer-subscribe-wrapper">
+            <input
+              class="footer-subscribe-input"
+              type="text"
+              name="subscribe"
+              id="subscribe"
+              placeholder="E-mail"
+              aria-label="subscribe"
+            />
+            <button class="subscribe-button" type="button">
+              Subscribe
+              <span class="subscribe-button-icon"
+                ><svg class="subscribe-button-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#icon-telegram"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+
     <div class="modal-overlay" id="modal-overlay">
       <div class="modal">
         <button class="modal-close-btn" type="button">
@@ -589,7 +613,12 @@
           Leave your contacts and we will call you back
         </h3>
 
-        <form name="review-form" method="POST" autocomplete="off">
+        <form
+          class="review-form"
+          name="review-form"
+          method="POST"
+          autocomplete="off"
+        >
           <legend class="visually-hidden">Contact Form</legend>
 
           <label class="review-form-label" for="review-name">Name</label>
@@ -668,8 +697,12 @@
               <a class="form-checkbox-label-link" href="#">Privacy Policy</a>
             </label>
           </div>
+
+          <button class="modal-button" type="button">Send</button>
         </form>
       </div>
     </div>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
